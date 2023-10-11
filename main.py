@@ -22,8 +22,6 @@ def calc_roots(a, b, c):
             else:
                 return root
 
-
-
     elif discriminant > 0:
         root1 = (-b + discriminant ** 0.5) / (2 * a)
         root2 = (-b - discriminant ** 0.5) / (2 * a)
@@ -44,11 +42,8 @@ def calc_roots(a, b, c):
 
     elif discriminant < 0:
 
-
-
         root1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
         root2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
-
 
         formatted_root1 = f"{root1.real:.1f}{'+' if root1.imag >= 0 else '-'}{abs(root1.imag):.1f}i"
         formatted_root2 = f"{root2.real:.1f}{'+' if root2.imag >= 0 else '-'}{abs(root2.imag):.1f}i"
@@ -84,7 +79,6 @@ def is_valid(co_str):
         return True
 
     return True
-
 
 
 nums = []
