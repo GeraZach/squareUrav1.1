@@ -2,9 +2,7 @@ import cmath
 from fractions import Fraction
 
 
-# Сделать ввод комплексных, ввод инф без флота,
-
-def calc_roots(a, b, c):
+def calculate_roots(a, b, c):
 
     discriminant = b ** 2 - 4 * a * c
 
@@ -109,10 +107,10 @@ a = float(nums[0])
 b = float(nums[1])
 c = float(nums[2])
 
-roots = calc_roots(a, b, c)
+roots = calculate_roots(a, b, c)
 
 if roots is None:
-    print("Вывод: Нет корней") # None
+    print("Вывод: Нет корней")   # None
 elif type(roots) is not float:
     print(f"Вывод: {roots[0]} | {roots[1]}")
 else:
