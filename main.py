@@ -73,9 +73,6 @@ def is_valid(co_str):
     if co_str.count("+") > 1:
         return False
 
-    # if co_str.count("-") > 1:
-    #     return False
-
     if co_str.count('e') > 1:
         return False
 
