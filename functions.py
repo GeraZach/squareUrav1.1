@@ -37,7 +37,6 @@ def calculate_roots(a, b, c):
         if abs(root) < epsilon:
             root = 0.0
         return root
-
     else:
         discriminant = b ** 2 - 4 * a * c
 
