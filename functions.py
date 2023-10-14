@@ -12,7 +12,7 @@ def string_to_fraction(nums):
     return nums
 
 
-def check_roots(a, b, c):
+def roots_zero_check(a, b, c):
 
     if a == 0:
         if b == 0:
@@ -31,7 +31,7 @@ def check_roots(a, b, c):
 
 def calculate_roots(a, b, c):
 
-    if check_roots(a, b, c) is False:
+    if roots_zero_check(a, b, c) is False:
 
         discriminant = b ** 2 - 4 * a * c
 
@@ -53,7 +53,7 @@ def calculate_roots(a, b, c):
             return root1, root2
 
     else:
-        return check_roots(a, b, c)
+        return roots_zero_check(a, b, c)
 
 
 
