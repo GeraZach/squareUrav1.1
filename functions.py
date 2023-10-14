@@ -17,22 +17,28 @@ def roots_zero_check(a, b, c):
     if a == 0:
         if b == 0:
             if c == 0:
-                return infiniteRootsOutput
+                return 'infiniteRoots'
             else:
                 return noRootsOutput
         else:
-            root = -c / b
-            if abs(root) < epsilon:
-                root = 0.0
-            return root
-    else:
-         return False
+            return 'aIsZero'
 
 
 def calculate_roots(a, b, c):
 
-    if roots_zero_check(a, b, c) is False:
+    if roots_zero_check(a, b, c) == 'infiniteRoots':
+        return infiniteRootsOutput
 
+    elif roots_zero_check(a,b,c) == 'noRoots':
+        return noRootsOutput
+
+    elif roots_zero_check(a,b,c) == 'aIsZero':
+        root = -c / b
+        if abs(root) < epsilon:
+            root = 0.0
+        return root
+
+    else:
         discriminant = b ** 2 - 4 * a * c
 
         root1 = complex(-b + discriminant ** 0.5) / (2 * a)
@@ -52,8 +58,7 @@ def calculate_roots(a, b, c):
                 root2 = 0.0
             return root1, root2
 
-    else:
-        return roots_zero_check(a, b, c)
+
 
 
 
