@@ -44,3 +44,12 @@ while len(nums) < 3:
         else:
             print("Введено некорректное число")
             continue
+
+
+def string_to_fraction(nums):
+    nums = list(map(Fraction, nums))
+    return nums
+
+
+if '/' in nums[0] or '/' in nums[1] or '/' in nums[2]:   ## def check fractions
+    nums = string_to_fraction(nums)

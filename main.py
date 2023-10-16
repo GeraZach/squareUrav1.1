@@ -1,19 +1,16 @@
 import cmath
 from fractions import Fraction
 from functions import *
+try:
 
-nums = input().split()
+    a, b, c = list(map(float, input().split()))
 
-if '/' in nums[0] or '/' in nums[1] or '/' in nums[2]:
-    nums = string_to_fraction(nums)
+    roots = solve_equation(a, b, c)
 
-a = float(nums[0])
-b = float(nums[1])
-c = float(nums[2])
+    if roots is None:
+        print(noRootsOutput)   # None
+    else:
+        print(roots)
 
-roots = calculate_roots(a, b, c)
-
-if roots is None:
-    print(noRootsOutput)   # None
-else:
-    print(roots)
+except ValueError:
+    print("incorect input")
