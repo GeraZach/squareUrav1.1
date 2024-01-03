@@ -1,11 +1,7 @@
 from functions import *
+from Dump.v2funcs import *
 
-
-try:
-    a, b, c = list(map(float, input().split()))
-except ValueError:
-    print("Incorrect input: Only numbers are accepted")
-    exit()
+a,b,c = input_module()
 
 
 roots = solve_equation(a, b, c)

@@ -53,3 +53,6 @@ def string_to_fraction(nums):
 
 if '/' in nums[0] or '/' in nums[1] or '/' in nums[2]:   ## def check fractions
     nums = string_to_fraction(nums)
+
+
+a = '23e3'
